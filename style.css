@@ -11,7 +11,7 @@
 }
 
 :root {
-    --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     --pale-blue: hsl(243, 100%, 93%);
     --grayish-blue: hsl(229, 7%, 55%);
     --dark-blue: hsl(228, 56%, 26%);
@@ -56,4 +56,39 @@ main {
     max-width: 3.25rem;
     height: 3rem;
     border-radius: .75rem;
+}
+
+.storage {
+    background-color: var(--dark-blue);
+    padding: 1rem;
+}
+
+.meter {
+    height: 20px;
+    width: 100%;
+    background-color: hsla(229, 57%, 11%, .5);
+    padding: .15rem;
+    border-radius: 1.5rem;
+}
+
+.bar {
+    display: block;
+    background: var(--gradient);
+    width: 70%;
+    height: 100%;
+    padding: .15rem;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.dot {
+    display: block;
+    background: var(--pale-blue);
+    width: 7%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    left: 93%;
+    overflow: hidden;
 }
